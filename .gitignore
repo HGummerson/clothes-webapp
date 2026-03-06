@@ -14,3 +14,5 @@ migrations/versions/4a9467f0477c_initial_migration.py
 migrations/versions/__pycache__/4a9467f0477c_initial_migration.cpython-39.pyc
 migrations/env.py
 config.py
+migrations/
+instance/
