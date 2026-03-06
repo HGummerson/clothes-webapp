@@ -1,0 +1,16 @@
+__pycache__/app.cpython-39.pyc
+__pycache__/config.cpython-39.pyc
+__pycache__/config.cpython-312.pyc
+__pycache__/forms.cpython-39.pyc
+__pycache__/forms.cpython-312.pyc
+__pycache__/models.cpython-39.pyc
+__pycache__/models.cpython-312.pyc
+__pycache__/weather_api.cpython-39.pyc
+__pycache__/weatherRanking.cpython-312.pyc
+
+migrations/script.py.mako
+migrations/__pycache__/env.cpython-39.pyc
+migrations/versions/4a9467f0477c_initial_migration.py
+migrations/versions/__pycache__/4a9467f0477c_initial_migration.cpython-39.pyc
+migrations/env.py
+config.py

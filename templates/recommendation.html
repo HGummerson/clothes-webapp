@@ -1,0 +1,49 @@
+<!-- templates/recommendation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Recommendation</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Your Recommendation</h1>
+        <nav>
+            <ul>
+                <ul>
+                    <li class="home-button"><a href="/" class="button-link">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h1>What city and country are you in? (ex victoria,ca) </h1>
+            <form method="post" action="{{ url_for('generate_recommendation') }}">
+                {{ form.hidden_tag() }}
+                {{ form.city.label }}
+                {{ form.city }}
+                {{ form.submit }}
+        </form>
+        </section>
+    </main>
+    <h2>What you should wear for {{ temperature_c }} °C, Rain conditions: {{ rain }} and wind conditions {{ wind }} m/h!</h2>
+        <div class="item-container">
+        {% for item in items %}
+            {% if item %}
+            <div class="item-box">
+                <p>{{ item.description }}</p>
+                <img src="{{ url_for('static', filename='uploads/' + item.file_name) }}" alt="Uploaded Image">
+                </div>
+            {% else %}
+                <p>No recommendation available for this category.</p>
+            {% endif %}
+    {% endfor %}
+    </div>
+</body>
+</html>
